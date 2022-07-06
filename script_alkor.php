@@ -20,7 +20,7 @@ $response = curl_exec($curl);
 curl_close($curl);
 $obj = json_decode($response); 
 echo $response;
-if (empty($reponse)){
+if (empty($obj)){
 	continue;
 }
 
@@ -63,11 +63,12 @@ for ($i = 0; $i <= count($all_attribute_180->Attributes)-1; $i++) {
 
 // $result = mysql_query($query);
 
-}
+
 
 // Deconnexion de la base de donnees
-mysql_close();
+//mysql_close();
 //---------
+unset($response);
 unset($arrayName);
 unset($arrayValue);
 unset($productCode);
@@ -82,7 +83,6 @@ unset($attribute_798);
 
 unset($all_attribute_180);
 sleep(1);
-echo $value;
 //////////////////---------------------------------------------
 }
 
